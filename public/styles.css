@@ -75,6 +75,24 @@ input {
     height: 400px;
 }
 
+.new_review_card {
+    border-radius: 19px;
+    padding: 15px;
+    text-align: center;
+    background-color: #151f30;
+    height: 400px;
+}
+
+.new_review_card h2 {
+    color: #f17b77c5
+}
+
+.new_review_card input {
+    width: 70%;
+    background-color: #c2c227ce;
+    color: black;
+}
+
 .review_card input {
     background-color: rgba(255, 255, 255, 0.473);
     color: black;
