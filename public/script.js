@@ -34,17 +34,22 @@ function returnMovies(url){
             
             const title = document.createElement('h3');
             title.setAttribute('id', 'title');
+
+            const link = document.createElement('h3');
+            link.setAttribute('id', 'link');
             
             const center = document.createElement('div');
 
 
             title.innerHTML = `${element.title}`;
+            link.innerHTML = `<a href="movie.html?id=${element.id}&title=${element.title}">Reviews</a>`
             setMaxLength(title);
             image.src = IMG_PATH + element.poster_path;
 
             center.appendChild(image);
             div_card.appendChild(center);
             div_card.appendChild(title);
+            div_card.appendChild(link);
             div_column.appendChild(div_card);
             div_row.appendChild(div_column);
 
@@ -53,11 +58,11 @@ function returnMovies(url){
     });
 };
 
-function setMaxLength(element) {
-    if (element.textContent.length > 28){
-        element.textContent = element.textContent.substring(0, 28) + '...';
-    }
-}
+ function setMaxLength(element) {
+     if (element.textContent.length > 28){
+         element.textContent = element.textContent.substring(0, 28) + '...';
+     }
+ }
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
